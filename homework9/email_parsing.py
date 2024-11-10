@@ -1,7 +1,7 @@
 import re
 
 def split_email(email):
-    pattern = r'([a-zA-Z][\w\.-]*)@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})'
+    pattern = r'(^[^\d][a-zA-Z0-9._%+-]+)@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})'
     match = re.match(pattern, email)
 
     if match:
